@@ -29,7 +29,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            HISTORICA <i className="fab fa-typo3"></i>
+            HISTORICA <i class="fa-solid fa-gopuram"></i>
           </Link>
           <div className="menu-icon" onClick={handleClik}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />

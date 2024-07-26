@@ -64,7 +64,7 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              HISTORICA <i className="fab fa-typo3" />
+              HISTORICA <i class="fa-solid fa-gopuram" />
             </Link>
           </div>
           <small className="website-rights">All rights reserved HISTORICA @ 2024!</small>
