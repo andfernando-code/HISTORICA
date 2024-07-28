@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, auth } from "../../Firebase";
+import "./SignUp.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -21,13 +22,17 @@ const SignUp = () => {
 
     try {
       // Create a new user with the provided email and password
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
-      console.log('User registered:', user);
+      console.log("User registered:", user);
       setSuccess("User registered successfully!");
       // You can add additional logic here, such as redirecting the user or displaying a success message
     } catch (error) {
-      console.log('Error signing up:', error);
+      console.log("Error signing up:", error);
       setError(error.message);
     }
   };
@@ -35,31 +40,37 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
+        {" "}
         <h2>Sign Up</h2>
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
         <label htmlFor="email">
-          Email:
+          {" "}
+          <span>Email:</span>
           <input type="text" onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label htmlFor="password">
-          Password:
+          <span>Password:</span>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <label htmlFor="confirmPassword">
-          Confirm Password:
+          <span>Confirm Password:</span>
           <input
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </label>
-        <button type="submit">Sign Up</button>
-        <p>
-          <Link to="/Login">Already Registered?</Link>
-        </p>
+        <button type="submit" className="sign-button">
+          Sign Up
+        </button>
+        <div className="link">
+          <p>
+            <Link to="/Login">Already Registered?</Link>
+          </p>
+        </div>
       </form>
     </div>
   );
