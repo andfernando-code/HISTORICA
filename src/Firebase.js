@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -21,4 +22,19 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
 
-export { firestore, storage, ref, uploadBytes, getDownloadURL, collection, addDoc };
+// Initialize Authentication
+const auth = getAuth(app);
+
+export { 
+  firestore, 
+  storage, 
+  ref, 
+  uploadBytes, 
+  getDownloadURL, 
+  collection, 
+  addDoc,
+  auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut
+};

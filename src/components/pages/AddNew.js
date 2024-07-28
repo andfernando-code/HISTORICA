@@ -105,7 +105,7 @@ const AddNew = () => {
                 className="image"
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" className="addbutton">Submit</button>
           </form>
         </div>
       </div>
