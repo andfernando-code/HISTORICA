@@ -39,39 +39,45 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
-      <form className="signup-form" onSubmit={handleSubmit}>
-        {" "}
-        <h2>Sign Up</h2>
-        {error && <p className="error">{error}</p>}
-        {success && <p className="success">{success}</p>}
-        <label htmlFor="email">
+      <div className="form-about">
+        <h1>HISTORICA<i class="fa-solid fa-gopuram"></i></h1>
+        <p>Explore the entire history with us</p>
+      </div>
+      <div className="form-form">
+        <form className="signup-form" onSubmit={handleSubmit}>
           {" "}
-          <span>Email:</span>
-          <input type="text" onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label htmlFor="password">
-          <span>Password:</span>
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <label htmlFor="confirmPassword">
-          <span>Confirm Password:</span>
-          <input
-            type="password"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </label>
-        <button type="submit" className="sign-button">
-          Sign Up
-        </button>
-        <div className="link">
-          <p>
-            <Link to="/Login">Already Registered?</Link>
-          </p>
-        </div>
-      </form>
+          <h2>Sign Up</h2><br/>
+          {error && <p className="error">{error}</p>}
+          {success && <p className="success">{success}</p>}
+          <label htmlFor="email">
+            {" "}
+            <span>Email:</span>
+            <input type="text" onChange={(e) => setEmail(e.target.value)} />
+          </label>
+          <label htmlFor="password">
+            <span>Password:</span>
+            <input
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <label htmlFor="confirmPassword">
+            <span>Confirm Password:</span>
+            <input
+              type="password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </label>
+          <button type="submit" className="sign-button">
+            Sign Up
+          </button>
+          <div className="link">
+            <p>
+              <Link to="/Login">Already Registered?</Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

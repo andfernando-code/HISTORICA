@@ -1,72 +1,108 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .signup-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: url("../../../public/images/signup2.jpg") center center/cover;
+}
+
+.signup-container .form-about {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container .form-form {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.form-about h1 {
+font-size: 40px;
+display: flex;
+margin-bottom: 10px;
+}
+
+.form-about p {
+    font-size: 25px;
+}
+
+.form-about h1 .fa-gopuram {
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 .signup-container .signup-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(255, 237, 116);
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .signup-form h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .signup-form .error {
-    color: red;
+  color: red;
 }
 
 .signup-form .success {
-    color: green;
+  color: green;
 }
 
 .signup-form label {
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    margin: 10px;
-    font-size: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  margin: 10px;
+  font-size: 20px;
 }
 
 .signup-form label span {
-    width: 100%;
-    text-align: center;
+  width: 100%;
 }
 
 .signup-form label input {
-    margin:  0 10px 0 0;
-    padding: 5px;
-    border-radius: 5px;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid rgba(128, 128, 128, 0.484);
 }
 
 .signup-form .sign-button {
-    font-size: 20px;
-    margin-top: 20px;
-    background-color :rgb(203, 180, 0);
-    border-radius: 5px;
-    padding: 3px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  background-color: green;
+  color: white;
 }
 
-.signup-form .link p{
-    text-decoration: none !important;
+.signup-form .link p {
+  text-decoration: none !important;
 }
