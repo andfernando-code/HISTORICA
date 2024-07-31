@@ -17,7 +17,7 @@ function App() {
           <Route path="/" exact Component={Home} />
           <Route path="/addnew" Component={AddNew} />
           <Route path="/products" Component={Products} />
-          <Route path="/sign-up" Component={SignUp} />
+          <Route path="/sign-up" Component={SignUp}/>
           <Route path="/Login" Component={Login} />
         </Routes>
       </BrowserRouter>

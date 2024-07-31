@@ -20,6 +20,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  padding: 10px;
+  overflow-wrap: break-word;
 }
 
 .signup-container .form-form {
@@ -38,7 +41,7 @@ margin-bottom: 10px;
 }
 
 .form-about p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .form-about h1 .fa-gopuram {
@@ -47,7 +50,7 @@ margin-bottom: 10px;
 }
 
 .signup-container .signup-form {
-  width: fit-content;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,8 +58,6 @@ margin-bottom: 10px;
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .signup-form h2 {
@@ -74,21 +75,20 @@ margin-bottom: 10px;
 .signup-form label {
   display: flex;
   width: 100%;
-  justify-content: right;
+  justify-content: left;
   margin: 10px;
   font-size: 20px;
 }
 
-.signup-form label span {
-  width: 100%;
-}
 
-.signup-form label input {
-  margin: 0 10px 0 0;
-  padding: 5px;
+.signup-form input {
+  padding: 10px;
   border-radius: 5px;
   border: none;
   border: 1px solid rgba(128, 128, 128, 0.484);
+  width: 100%;
+  font-size: 15px;
+  margin: 10px;
 }
 
 .signup-form .sign-button {
@@ -99,10 +99,21 @@ margin-bottom: 10px;
   cursor: pointer;
   margin-bottom: 20px;
   border: 1px solid black;
-  background-color: green;
+  background-color: rgb(110, 75, 0);
   color: white;
+  width: 100%;
 }
 
 .signup-form .link p {
   text-decoration: none !important;
+}
+
+@media screen and (max-width: 960px) {
+  .signup-container .form-about {
+    display: none;
+  }
+
+  .signup-container .form-form {
+    width: 100%;
+  }
 }
