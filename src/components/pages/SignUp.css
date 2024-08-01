@@ -92,16 +92,20 @@ margin-bottom: 10px;
 }
 
 .signup-form .sign-button {
-  font-size: 20px;
+  font-size: 23px;
   margin-top: 20px;
   border-radius: 5px;
   padding: 3px;
   cursor: pointer;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(110, 75, 0);
   background-color: rgb(110, 75, 0);
   color: white;
   width: 100%;
+}
+
+.signup-form .sign-button:hover {
+  background-color: rgb(91, 62, 0);
 }
 
 .signup-form .link p {

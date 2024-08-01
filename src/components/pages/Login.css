@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .signup-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: url("../../../public/images/signup2.jpg") center center/cover;
+  }
+  
+  .signup-container .form-about {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    overflow-wrap: break-word;
+  }
+  
+  .signup-container .form-form {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .form-about h1 {
+  font-size: 40px;
+  display: flex;
+  margin-bottom: 10px;
+  }
+  
+  .form-about p {
+      font-size: 20px;
+  }
+  
+  .form-about h1 .fa-gopuram {
+      margin-top: 10px;
+      font-size: 30px;
+  }
+  
+  .signup-container .signup-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .signup-form h2 {
+    font-size: 40px;
+  }
+  
+  .signup-form .error {
+    color: red;
+  }
+  
+  .signup-form .success {
+    color: green;
+  }
+  
+  .signup-form label {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin: 10px;
+    font-size: 20px;
+  }
+  
+  
+  .signup-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.484);
+    width: 100%;
+    font-size: 15px;
+    margin: 10px;
+  }
+  
+  .signup-form .sign-button {
+    font-size: 23px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 1px solid rgb(110, 75, 0);
+    background-color: rgb(110, 75, 0);
+    color: white;
+    width: 100%;
+  }
+  
+  .signup-form .sign-button:hover {
+    background-color: rgb(91, 62, 0);
+  }
+  
+  .signup-form .link p {
+    text-decoration: none !important;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .signup-container .form-about {
+      display: none;
+    }
+  
+    .signup-container .form-form {
+      width: 100%;
+    }
+  }
