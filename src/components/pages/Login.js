@@ -31,7 +31,22 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       console.log("Error logging in:", error);
-      setError(error.message);
+      let errorMessage = error.message;
+
+      if (errorMessage.includes("auth/invalid-email")) {
+        errorMessage = "Invalid email !";
+      }
+      else if (errorMessage.includes("auth/invalid-credential")) {
+        errorMessage = "Incorrect Password !";
+      }
+      else if (errorMessage.includes("auth/network-request-failed")) {
+        errorMessage = "Network Error !";
+      }
+      else if (errorMessage.includes("auth/missing-password")) {
+        errorMessage = "Missing Password !";
+      }
+
+      setError(errorMessage);
     }
   };
 

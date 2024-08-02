@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Products from "./components/pages/Products";
@@ -12,7 +11,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
         <Routes>
           <Route path="/" exact Component={Home} />
           <Route path="/addnew" Component={AddNew} />

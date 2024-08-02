@@ -10,6 +10,7 @@ import {
 } from "../../Firebase";
 import "./AddNew.css";
 import Footer from "../Footer";
+import NavBar from "../NavBar";
 
 const AddNew = () => {
   const [name, setName] = useState("");
@@ -55,6 +56,7 @@ const AddNew = () => {
 
   return (
     <>
+    <NavBar />
       <div className="form-wrap">
         <div className="content-wrap">
           <h5>

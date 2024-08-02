@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, auth } from "../../Firebase";
 import "./SignUp.css";
 
@@ -9,6 +9,7 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
@@ -30,10 +31,30 @@ const SignUp = () => {
       const user = userCredential.user;
       console.log("User registered:", user);
       setSuccess("User registered successfully!");
+
+      navigate("/");
       // You can add additional logic here, such as redirecting the user or displaying a success message
     } catch (error) {
-      console.log("Error signing up:", error);
-      setError(error.message);
+      console.log("Error logging in:", error);
+      let errorMessage = error.message;
+
+      if (errorMessage.includes("auth/invalid-email")) {
+        errorMessage = "Invalid email !";
+      }
+      else if (errorMessage.includes("auth/invalid-credential")) {
+        errorMessage = "Incorrect Password !";
+      }
+      else if (errorMessage.includes("auth/network-request-failed")) {
+        errorMessage = "Network Error !";
+      }
+      else if (errorMessage.includes("auth/missing-password")) {
+        errorMessage = "Missing Password !";
+      }
+      else if (errorMessage.includes("auth/email-already-in-use")) {
+        errorMessage = "Email already in use !";
+      }
+
+      setError(errorMessage);
     }
   };
 
