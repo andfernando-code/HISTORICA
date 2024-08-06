@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function CardItem(props) {
+function CardItem(props) { 
   return (
     <>
       <li className="cards__item">
@@ -10,7 +10,7 @@ function CardItem(props) {
             <img src={props.src} alt="Travel" className="cards__item__img" />
           </figure>
           <div className="cards__item__info">
-            <h4>Location</h4><br/>
+            <h4>{props.location}</h4><br/>
             <h5 className="cards__item__text">{props.text}</h5>
           </div>
         </Link>

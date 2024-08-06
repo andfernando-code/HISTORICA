@@ -2,75 +2,34 @@ import React from "react";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
 import "./Explore.css";
-import { Link } from "react-router-dom";
+import CardItem from "../CardItem";
 
 export default function Explore() {
   return (
     <>
       <NavBar />
-      <div className="explore-container">
-        <div className="explore-box">
-          <div className="explore-card">
-            <Link to="/explore">
-              <div className="image">
-                <img src="images/img-1.jpg" alt="hi" />
-                <h5>hello</h5>
-              </div>
-              <p>
-                ijndijnfi4ntihvt5ni5tf v5tfuh5tnf5th f 5t ct45 fh5 tf5h f5 f 4tf
-                4tunft4unf 4tf t4unf4thf 4 f 4uhtfh
-              </p>
-            </Link>
-          </div>
-          <div className="explore-card">
-            <Link to="/explore">
-              <div className="image">
-                <img src="images/img-1.jpg" alt="hi" />
-                <h5>hello</h5>
-              </div>
-              <p>
-                ijndijnfi4ntihvt5ni5tf v5tfuh5tnf5th f 5t ct45 fh5 tf5h f5 f 4tf
-                4tunft4unf 4tf t4unf4thf 4 f 4uhtfh
-              </p>
-            </Link>
-          </div>
-          <div className="explore-card">
-            <Link to="/explore">
-              <div className="image">
-                <img src="images/img-1.jpg" alt="hi" />
-                <h5>hello</h5>
-              </div>
-              <p>
-                ijndijnfi4ntihvt5ni5tf v5tfuh5tnf5th f 5t ct45 fh5 tf5h f5 f 4tf
-                4tunft4unf 4tf t4unf4thf 4 f 4uhtfh
-              </p>
-            </Link>
-          </div>
-          <div className="explore-card">
-            <Link to="/explore">
-              <div className="image">
-                <img src="images/img-1.jpg" alt="hi" />
-                <h5>hello</h5>
-              </div>
-              <p>
-                ijndijnfi4ntihvt5ni5tf v5tfuh5tnf5th f 5t ct45 fh5 tf5h f5 f 4tf
-                4tunft4unf 4tf t4unf4thf 4 f 4uhtfh
-              </p>
-            </Link>
-          </div>
-          <div className="explore-card">
-            <Link to="/explore">
-              <div className="image">
-                <img src="images/img-1.jpg" alt="hi" />
-                <h5>hello</h5>
-              </div>
-              <p>
-                ijndijnfi4ntihvt5ni5tf v5tfuh5tnf5th f 5t ct45 fh5 tf5h f5 f 4tf
-                4tunft4unf 4tf t4unf4thf 4 f 4uhtfh
-              </p>
-            </Link>
+      <div className="explore-cards-container">
+      <div className="cards">
+        <h1>hello i'm nipuna</h1>
+        <div className="cards__container">
+          <div className="cards__wrapper">
+            <ul className="cards__items">
+              <CardItem
+                src="images/img-9.jpg"
+                text="Explore the hidden waterfall deep inside the Amazon Jungle"
+                label="Adventure"
+                path="/services"
+              />
+              <CardItem
+                src="images/img-2.jpg"
+                text="Travel through the Isalands of Bali in a private Cruise"
+                label="Luxury"
+                path="/services"
+              />
+            </ul>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </>
