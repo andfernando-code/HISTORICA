@@ -86,7 +86,7 @@ function NavBar() {
           )}
           {userEmail && (
             <div className="user-icon">
-              {userEmail.charAt(0).toUpperCase()}
+              {userEmail.charAt(0).toUpperCase()} 
             </div>
           )}
         </div>

@@ -3,8 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: rgb(0,0,0);
-background: linear-gradient(346deg, rgba(0,0,0,1) 22%, rgba(8,0,57,1) 56%, rgba(0,81,158,1) 100%);
+  background: #151515;
 }
 
 .explore-cards-container .cards {

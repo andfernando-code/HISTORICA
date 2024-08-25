@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.all {
+    width: 100%;
+    height: fit-content;
+    background: #151515;
+}
+
+.all .cards{
+    background: transparent;
+}
+
+.all .cards h1{
+    color: white;
+    font-family: 'Oswald';
+}
